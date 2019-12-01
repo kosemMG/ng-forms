@@ -54,28 +54,12 @@
         />
         <label for="whatsapp">Do you have Whatsapp?</label>
       </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Submit</button>
+      </div>
     </form>
   </div>
   <div class="col-md-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Age</th>
-          <th>Phone</th>
-          <th>Whatsapp?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of users">
-          <td>{{ user.name }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.age }}</td>
-          <td>{{ user.phone }}</td>
-          <td>{{ user.whatsapp }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <app-form-group-table></app-form-group-table>
   </div>
 </div>

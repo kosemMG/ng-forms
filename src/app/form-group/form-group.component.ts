@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 import { User } from '../form-group/user';
+import { FormGroupService } from './form-group.service';
 
 @Component({
   selector: "app-form-group",
@@ -16,14 +17,12 @@ export class FormGroupComponent implements OnInit {
     hasWhatsapp: new FormControl(null)
   });
 
-  users: User[];
-
-  constructor() {}
+  constructor(private formService: FormGroupService) {}
 
   ngOnInit() {}
 
   onSubmit() {
     console.log(this.contactForm);
-    
+    this.formService.users.push(this.contactForm.value);
   }
 }

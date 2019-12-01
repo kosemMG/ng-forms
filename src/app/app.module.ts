@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { FormGroupTableComponent } from './form-group/form-group-table/form-group-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExampleComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    FormGroupTableComponent
   ],
   imports: [
     BrowserModule,
