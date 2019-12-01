@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-6">
+    <form>
+      <label for="">Name:</label>
+      <input id="name" type="text" class="form-control" [formControl]="name" />
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        class="form-control"
+        [formControl]="email"
+      />
+      <button class="btn btn-primary" type="button" (click)="addUser()">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-6">
+      <table class="table">
+          <thead>
+              <th>Name</th>
+              <th>Email</th>
+          </thead>
+          <tr *ngFor="let user of users">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+          </tr>
+      </table>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <label for="my-email">My email</label>
+        <input type="email" class="form-control" id="my-email" [formControl]="myEmail">
+        <button class="btn btn-primary" type="button" (click)=updateEmail()>Change</button>
+    </div>
+    <div class="col-md-6">
+        My email: {{ myEmail }}
+    </div>
+</div>
